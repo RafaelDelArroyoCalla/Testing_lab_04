@@ -16,7 +16,7 @@ def stats(lst):
         middle = len(lst_sorted) // 2
         median = (lst_sorted[middle] + lst_sorted[middle - 1]) / 2
     else:
-        median = lst_sorted[len(lst_sorted) // 2]
+        median = lst_sorted[len(lst_sorted) / 2]
     mode_times = None
     for i in freq.values():
         if mode_times is None or i > mode_times:
