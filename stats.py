@@ -32,6 +32,9 @@ def stats(lst):
     print("mode(s) = " + str(mode))
 
 def test():
-    pass  # por ahora vacio
+    stats([1])                   # min = max = median = mode = 1
+    stats([1, 2])                # median = (1+2)/2, mode = 1 and 2
+    stats([4, 1, 2, 2, 3, 5])    # median = 2.5, mode = 2
+    stats([7, 7, 3, 3, 5])       # mode = 3, 7 (empate)
 
 test()
