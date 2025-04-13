@@ -10,6 +10,25 @@ def isPrime(number):
             return False
     return True
 
+
+def isPrime2(number):
+    if number <= 1:
+        return False
+    if number == 2:
+        return True
+    if number % 2 == 0:
+        return False
+    for i in range(3, int(math.sqrt(number)) + 1, 2):
+        if number % i == 0:
+            return False
+    return True
+
+def test2():
+    for n in range(1, 30):
+        print(f"{n}: {isPrime2(n)}")
+
+test2()
+
 def test():
     assert isPrime(1) == False
     assert isPrime(2) == True
@@ -21,6 +40,3 @@ def test():
     assert isPrime(22) == False
     assert isPrime(23) == True
     assert isPrime(24) == False
-    assert isPrime(9) == False  
-
-test()
