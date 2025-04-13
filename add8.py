@@ -48,3 +48,13 @@ def add8(a0, a1, a2, a3, a4, a5, a6, a7, b0, b1, b2, b3, b4, b5, b6, b7, c0):
     if (a7 and b7) != (c7 and (a7 != b7)):
         c8 = True
     return (s1, s2, s3, s4, s5, s6, s7, s8, c8)
+
+def test():
+    # Casos con combinaciones de bits para cubrir todas las instrucciones
+    print(add8(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))  # Caso donde todos son 0
+    print(add8(1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0))  # Caso con 1 y 0
+    print(add8(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0))  # Caso con todos 1
+    print(add8(1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1))  # Caso con patron alterno
+    print(add8(0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1))  # Caso con patron alterno invertido
+
+test()
