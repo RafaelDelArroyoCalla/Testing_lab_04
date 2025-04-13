@@ -1,4 +1,5 @@
 import math
+
 def isPrime(number):
     if number == 2:
         return True
